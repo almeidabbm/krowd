@@ -1,0 +1,26 @@
+{
+  "name": "krowd",
+  "version": "0.0.1",
+  "description": "NodeJS CLI to run scripts in parallel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almeidabbm/krowd.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "parallel",
+    "concurrent",
+    "load",
+    "test"
+  ],
+  "author": "Bruno Almeida",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/almeidabbm/krowd/issues"
+  },
+  "homepage": "https://github.com/almeidabbm/krowd#readme"
+}
