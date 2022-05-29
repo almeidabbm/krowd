@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "krowd": "./bin/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/almeidabbm/krowd.git"
@@ -15,7 +18,8 @@
     "parallel",
     "concurrent",
     "load",
-    "test"
+    "test",
+    "cli"
   ],
   "author": "Bruno Almeida",
   "license": "MIT",
