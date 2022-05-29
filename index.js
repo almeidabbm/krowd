@@ -1,21 +1,13 @@
+const { program } = require("commander");
 const path = require("path");
-const { Worker, isMainThread } = require("node:worker_threads");
+const runWorkers = require("./src/run-workers");
 
-function runWorkers(scriptPath, workers = 1, iterations = 1) {
-  if (isMainThread) {
-    for (let i = 0; i < workers; i++) {
-      new Worker(__filename);
-    }
-  } else {
-    for (let i = 0; i < iterations; i++) {
-      try {
-        delete require.cache[require.resolve(scriptPath)];
-        require(scriptPath);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-  }
-}
+program.requiredOption("-f, --file <filepath>");
 
-runWorkers(path.join(__dirname, "./something.js"), 2, 10);
+program.parse();
+
+const opts = program.opts();
+
+console.log(opts);
+
+runWorkers(path.join(__dirname, opts.file));
