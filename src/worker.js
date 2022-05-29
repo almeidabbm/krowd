@@ -3,9 +3,9 @@ const { iterations, scriptPath } = workerData;
 
 for (let i = 0; i < iterations; i++) {
   try {
-    console.log(scriptPath);
     delete require.cache[require.resolve(scriptPath)];
-    require(scriptPath);
+    const result = require(scriptPath);
+    console.log(result);
   } catch (error) {
     console.log(error);
   }
