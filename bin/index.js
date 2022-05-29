@@ -22,4 +22,6 @@ runWorkers(
   path.join(process.cwd(), opts.file),
   Number(opts.workers),
   Number(opts.iterations)
-);
+).then((result) => {
+  console.log(result.map((wr) => wr.value));
+});
