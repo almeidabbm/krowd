@@ -1,7 +1,7 @@
 const { Worker, isMainThread } = require("node:worker_threads");
 const path = require("path");
 
-function runWorkers(scriptPath, workers = 1, iterations = 1) {
+function krowd(scriptPath, workers = 1, iterations = 1) {
   if (isMainThread) {
     const workerPromises = [];
     for (let i = 0; i < workers; i++) {
@@ -27,4 +27,4 @@ function runWorkers(scriptPath, workers = 1, iterations = 1) {
   }
 }
 
-module.exports = runWorkers;
+module.exports = krowd;
