@@ -4,8 +4,10 @@ const { program } = require("commander");
 const path = require("path");
 const { parseInt } = require("../src/custom-parsers");
 const runWorkers = require("../src/krowd");
+const pkg = require("../package.json");
 
 program
+  .version(pkg.version)
   .requiredOption("-f, --file <string>", "Path of the script to run")
   .option("-w, --workers <number>", "Number of workers to run", parseInt)
   .option(
