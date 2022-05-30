@@ -1,1 +1,1 @@
-module.exports = require("./src/run-workers");
+module.exports = require("./src/krowd");

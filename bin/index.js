@@ -3,7 +3,7 @@
 const { program } = require("commander");
 const path = require("path");
 const { parseInt } = require("../src/custom-parsers");
-const runWorkers = require("../src/run-workers");
+const runWorkers = require("../src/krowd");
 
 program
   .requiredOption("-f, --file <string>", "Path of the script to run")
