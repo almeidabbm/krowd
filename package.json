@@ -1,6 +1,6 @@
 {
   "name": "krowd",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NodeJS CLI to run scripts in parallel",
   "main": "index.js",
   "scripts": {
